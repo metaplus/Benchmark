@@ -2,10 +2,12 @@
 //
 
 #include "stdafx.h"
+#include <laser/basis.hpp>
 
 
 int main()
 {
-    return 0;
+	file::ifstream ss;
+	return 0;
 }
 
