@@ -2,10 +2,8 @@
 #include <laser/basis.h>
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    fstream fs;
-    thread t{[]{
-        cout<<"laji"<<en;
-    }};
-    t.join();
+    std::cout << "Hello, World!" << std::endl;
+    std::cout << "Hello, World!" << std::endl;
+
     return 0;
 }

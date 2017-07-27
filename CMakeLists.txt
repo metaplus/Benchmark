@@ -1,14 +1,15 @@
 cmake_minimum_required(VERSION 3.8)
 project(Benchmark)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 if(WIN32)
     include_directories($ENV{MingwInc})
     link_directories($ENV{MingwLib})
 elseif(UNIX )
 endif()
-#add_definitions("-O3")
+#add_definitions(-O3)
+add_definitions(-Wno-deprecated-declarations)
 
 find_package(Boost 1.64 COMPONENTS REQUIRED system filesystem thread)
 if(Boost_FOUND)
@@ -20,3 +21,4 @@ if(Boost_FOUND)
     add_executable(IO ${IOSource})
     target_link_libraries(IO ${LIB})
 endif()
+
