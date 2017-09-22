@@ -15,29 +15,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\detail\refBoost.h">
+    <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\detail\refSTL.h">
+    <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\basis.h">
+    <ClInclude Include="scaler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\meta.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\net.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\parallel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\math.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\advance.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameScale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scaler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.md" />
   </ItemGroup>
 </Project>
