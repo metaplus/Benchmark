@@ -15,29 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\detail\refBoost.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\detail\refSTL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\basis.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\meta.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\net.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\parallel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\math.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="G:\OneDrive\Project\Toolkit\Library\Facility\facility\advance.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="DiskIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
