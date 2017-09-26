@@ -10,5 +10,4 @@ cirucumstance.
 The underlying explanation should be the cache block in the disk 
 whose size affect the optimal buffer size in system memory.
 
-
-![lU0Ln.png](https://s1.ax1x.com/2017/09/26/lU0Ln.png "performance")
+![Imgur](https://i.imgur.com/IS2IKMd.jpg "io performance")

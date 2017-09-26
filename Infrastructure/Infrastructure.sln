@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DiskIO", "DiskIO\DiskIO.vcxproj", "{818F7200-62B1-4ABA-835D-C0A914351CCF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Interprocess", "Interprocess\Interprocess.vcxproj", "{C8658287-B29E-443B-86E8-9057259CE1D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,19 @@ Global
 		{818F7200-62B1-4ABA-835D-C0A914351CCF}.Release|x64.Build.0 = Release|x64
 		{818F7200-62B1-4ABA-835D-C0A914351CCF}.Release|x86.ActiveCfg = Release|Win32
 		{818F7200-62B1-4ABA-835D-C0A914351CCF}.Release|x86.Build.0 = Release|Win32
+		{C8658287-B29E-443B-86E8-9057259CE1D6}.Debug|x64.ActiveCfg = Debug|x64
+		{C8658287-B29E-443B-86E8-9057259CE1D6}.Debug|x64.Build.0 = Debug|x64
+		{C8658287-B29E-443B-86E8-9057259CE1D6}.Debug|x86.ActiveCfg = Debug|Win32
+		{C8658287-B29E-443B-86E8-9057259CE1D6}.Debug|x86.Build.0 = Debug|Win32
+		{C8658287-B29E-443B-86E8-9057259CE1D6}.Release|x64.ActiveCfg = Release|x64
+		{C8658287-B29E-443B-86E8-9057259CE1D6}.Release|x64.Build.0 = Release|x64
+		{C8658287-B29E-443B-86E8-9057259CE1D6}.Release|x86.ActiveCfg = Release|Win32
+		{C8658287-B29E-443B-86E8-9057259CE1D6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E86F217F-CA95-4593-BD22-23622866B65D}
 	EndGlobalSection
 EndGlobal
