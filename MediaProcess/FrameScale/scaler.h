@@ -76,7 +76,6 @@ scaler::port::port(Ts&&... args) noexcept(false)
 {
     frame_size = av_image_alloc(data, linesize, width, height,
         static_cast<AVPixelFormat>(pix_fmt), 16);
- 
     if (frame_size < 0) throw std::runtime_error(
         std::string{ "raw image allocation fail, pixel format: " }+
         av_get_pix_fmt_name(static_cast<AVPixelFormat>(pix_fmt)));
@@ -95,7 +94,7 @@ scaler::push(Ts&&... args)
         sws_ctx_ = sws_getContext(
             src.width, src.height, static_cast<AVPixelFormat>(src.pix_fmt),
             dest.width, dest.height, static_cast<AVPixelFormat>(dest.pix_fmt),
-            SWS_X, nullptr, nullptr, nullptr);
+            SWS_FAST_BILINEAR, nullptr, nullptr, nullptr);
         if (!sws_ctx_) throw std::runtime_error("create scaling context");
     }
 }

@@ -5,8 +5,6 @@
 scaler::pipe::pipe(int const w, int const h, pixel_format const fmt)
     : width{ w }, height{ h }, pix_fmt{ fmt }, frame_size{ 0 } {}
 
-
-
 scaler::scaler() : sws_ctx_{ nullptr }
 {
     std::cout << "ctor" << sizeof(pipe) << std::endl;
@@ -40,7 +38,5 @@ std::unique_ptr<char[]> scaler::run_one(const std::unique_ptr<char[]>& data)
     sws_scale(sws_ctx_, (const uint8_t * const*)src.data,
         src.linesize, 0, src.height, dest.data, dest.linesize);
     std::copy(dest.data[0], dest.data[0] + dest.size(), result_ptr.get());
-
     return result_ptr;
 }
-
