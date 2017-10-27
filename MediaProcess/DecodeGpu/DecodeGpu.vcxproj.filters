@@ -29,10 +29,19 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DecodeGpu.cpp">
+    <ClCompile Include="DecodeGpu.Ver0.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\hw_decode.cpp">
+    <ClCompile Include="DecodeGpu.Ver1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecodeGpu.Ver2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecodeGpu.Ver3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DecodeGpu.Ver4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

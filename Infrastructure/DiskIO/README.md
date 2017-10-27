@@ -9,5 +9,4 @@ entails a approximate reading speed to the 1 single thread
 cirucumstance.  
 The underlying explanation should be the cache block in the disk 
 whose size affect the optimal buffer size in system memory.
-
-![Imgur](https://i.imgur.com/IS2IKMd.jpg "io performance")
+![8W5a6.png](https://s1.ax1x.com/2017/10/13/8W5a6.png "io performance")
