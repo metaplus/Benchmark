@@ -7,6 +7,7 @@
 #include <libavutil/avassert.h>
 #include <libavutil/imgutils.h>
 
+
 static AVBufferRef *hw_device_ctx = NULL;
 static enum AVPixelFormat hw_pix_fmt;
 static FILE *output_file = NULL;

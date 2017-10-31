@@ -8,6 +8,7 @@
 #include <tchar.h>
 // TODO: reference additional headers your program requires here
 #include <iostream>
+#include <fstream>
 #include <chrono>
 #include <string>
 #include <cassert>
@@ -24,14 +25,10 @@ extern "C" {
 #include <libavutil/hwcontext.h>
 #include <libavutil/file.h>
 #include <libavcodec/avcodec.h>
+#include <libavcodec/dxva2.h>
 #include <libswscale/swscale.h>
 #include <libavformat/avio.h>
 #include <libavformat/avformat.h>
-
-
-#include <libavfilter/avfiltergraph.h>
-#include <libavfilter/buffersink.h>
-#include <libavfilter/buffersrc.h>
 
 }
 #define BOOST_THREAD_VERSION 4
