@@ -36,3 +36,8 @@ extern "C" {
 #define BOOST_USE_WINDOWS_H    
 #include <boost/thread.hpp>
 #include <boost/thread/future.hpp>
+
+#pragma comment(lib, "avformat")
+#pragma comment(lib, "avcodec")
+#pragma comment(lib, "avutil")
+#pragma comment(lib, "swscale")

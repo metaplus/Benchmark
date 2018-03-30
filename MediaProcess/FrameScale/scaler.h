@@ -10,6 +10,10 @@ extern "C" {
 #include <libavutil/parseutils.h>
 #include <libswscale/swscale.h>
 }
+#pragma comment(lib, "avformat")
+#pragma comment(lib, "avcodec")
+#pragma comment(lib, "avutil")
+#pragma comment(lib, "swscale")
 
 struct buffer_view
 {
