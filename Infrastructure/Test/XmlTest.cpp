@@ -3,10 +3,19 @@
 #pragma warning(push)
 #pragma warning(disable:996)
 #include <boost/multi_array.hpp>
-#include <tinyxml2.h>
-#include <regex>
+#include <folly/File.h>
+#include <folly/FileUtil.h>
 #include <chrono>
+#include <chrono>
+#include <regex>
+#include <regex>
+#include <string>
+#include <tinyxml2.h>
+#include <vector>
 #pragma warning(pop)
+
+#include "../XmlProcess/mpd_format.h"
+#include "../XmlProcess/mpd_parser.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std::chrono_literals;
@@ -66,15 +75,31 @@ namespace Test
             Assert::IsTrue(secs2 == 1.5s);
         }
 
-        TEST_METHOD(XmlParseSequential) {
-            tinyxml2::XMLDocument document;
-            result = document.LoadFile("F:/Tile/tears_of_steal/4k-part/tos_srd_4K.mpd");
-
+        TEST_METHOD(MpdParserDuration) {
+            auto secs = mpd_parser::parse_duration("PT0H12M14.000S");
+            auto secs2 = mpd_parser::parse_duration("PT1.500S");
+            Assert::IsTrue(secs == 734s);
+            Assert::IsTrue(secs2 == 1.5s);
         }
 
         TEST_METHOD(XmlParseParallel) {
+            std::string xml_string;
+            result = folly::readFile("F:/Tile/tears_of_steal/4k-part/tos_srd_4K.mpd", xml_string);
             tinyxml2::XMLDocument document;
-            result = document.LoadFile("F:/Tile/tears_of_steal/4k-part/tos_srd_4K.mpd");
+            result = document.Parse(xml_string.c_str());
+            auto* xml_root = document.RootElement();
+            auto t = xml_root->Attribute("mediaPresentationDuration");
+            mpd_parser parser{ xml_string };
+            Assert::IsTrue(true);
+        }
+
+        TEST_METHOD(MpdVideoSetAccess) {
+            std::string xml_string;
+            result = folly::readFile("F:/Tile/tears_of_steal/4k-part/tos_srd_4K.mpd", xml_string);
+            mpd_parser parser{ xml_string };
+            auto& video_set = parser.video_set(2, 1);
+            Assert::IsTrue(video_set.x == 2);
+            Assert::IsTrue(video_set.y == 1);
         }
     };
 }

@@ -1,41 +1,29 @@
 #pragma once
 
-struct mpd
-{
-    std::string title;
-    std::chrono::duration<int64_t> duration;
-private:
-    std::chrono::duration<int64_t> parse_total_duration();
-    std::string parse_concrete_media();
-};
-
-struct represent_base
+struct represent
 {
     int16_t id = 0;
     int bandwidth = 0;
-    std::string codecs;
-    std::string mime_type;
+    std::string media;
     std::string initialization;
 };
 
-struct video_represent : represent_base
+struct adaptation_set
 {
-    int8_t row = 0;
-    int8_t column = 0;
+    std::string codecs;
+    std::string mime_type;
+    std::vector<represent> represents;
+};
+
+struct video_adaptation_set : adaptation_set
+{
+    int16_t x = 0;
+    int16_t y = 0;
     int16_t width = 0;
     int16_t height = 0;
 };
 
-struct audio_represent : represent_base
+struct audio_adaptation_set : adaptation_set
 {
     int sample_rate = 0;
 };
-
-
-class mpd_format
-{
-public:
-    mpd_format();
-    ~mpd_format();
-};
-

@@ -32,9 +32,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mpd_format.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="mpd_parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
