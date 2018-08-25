@@ -55,10 +55,8 @@ namespace av
 
         stream demux(media::type media_type) const;
         std::pair<codec, stream> demux_with_codec(media::type media_type) const;
-
         packet read(std::optional<media::type> media_type) const;
         std::vector<packet> read(size_t count, std::optional<media::type> media_type) const;
-
     private:
         //void prepare() const;
         std::shared_ptr<AVFormatContext> handle_;
@@ -79,13 +77,9 @@ namespace av
         explicit operator bool() const;
 
         bool valid() const;
-
         int64_t decoded_count() const;
-
         int64_t frame_count() const;
-
         std::vector<frame> decode(const packet& compressed) const;
-
     private:
         std::shared_ptr<AVCodecContext> handle_;
         stream stream_;

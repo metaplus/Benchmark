@@ -22,6 +22,8 @@ namespace
 
 }
 
+#pragma warning(push)
+#pragma warning(disable:4244)
 class time_guard
 {
     std::chrono::steady_clock::time_point time_mark_;
@@ -38,6 +40,7 @@ public:
             << " secs" << std::endl;
     }
 };    
+#pragma warning(pop)
 
 //msvc stl implementation use std::decay_t<Args...> and compressed pair
 //both allocated on stack, cache friendly

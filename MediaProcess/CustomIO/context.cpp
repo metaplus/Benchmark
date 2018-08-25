@@ -3,12 +3,19 @@
 
 av::io_context::io_context(func_tuple&& io_functions, const uint32_t buf_size, const bool buf_writable)
     : io_interface_(make_io_interface(std::move(io_functions)))
-    , handle_(avio_alloc_context(static_cast<uint8_t*>(av_malloc(buf_size)),
+    , handle_(avio_alloc_context(
+        static_cast<uint8_t*>(av_malloc(buf_size)),
+        //new uint8_t[4096](),
         buf_size, buf_writable, io_interface_.get(),
         io_interface_->readable() ? read_func_delegate : nullptr,
         io_interface_->writable() ? write_func_delegate : nullptr,
         io_interface_->seekable() ? seek_func_delegate : nullptr),
-        [](pointer ptr) { av_freep(&ptr->buffer);  av_freep(&ptr); })
+        [](pointer ptr)
+{
+    av_freep(&ptr->buffer);  
+    //delete[] ptr->buffer;
+    av_freep(&ptr);
+})
 {
     std::cerr << "constructor\n";
 }
